@@ -1,62 +1,29 @@
-# GitHub SSH Configuration for Personal and Professional Accounts
+# 🧠 Machine Learning Projects – Academic Research
 
-This guide helps you configure separate SSH keys for your **personal** and **professional** GitHub accounts on the same machine.
+Welcome to my public repository showcasing academic work and experiments in **Machine Learning**.
+
+This repository includes code, models, and experiments developed throughout my academic journey, including my **PhD research** focused on the intersection of **Machine Learning and Blockchain**.
+
+## 📚 What You'll Find Here
+
+- Research-driven machine learning experiments  
+- Explorations of ML models for smart contracts and decentralized systems  
+- Reproducible code used in publications and academic projects  
+- Clean, modular Python notebooks and scripts  
+- Documentation and references for each project
+
+## 🧪 Main Areas of Focus
+
+- Supervised & Unsupervised Learning  
+- Anomaly Detection & Fraud Detection  
+- Federated & Privacy-Preserving ML  
+- Blockchain data modeling and analysis  
+- MLOps best practices for research environments  
+
+## 👨‍🔬 About Me
+
+I'm a Principal Data Scientist in the automotive industry and a PhD candidate researching **Machine Learning applications in Blockchain systems**. I use this space to publish and maintain some of my academic work and side projects.
 
 ---
 
-## 🚀 Step-by-Step Instructions
-
-### 1. Generate a New SSH Key for Your Personal Account
-
-```bash
-ssh-keygen -t rsa -b 4096 -C "jdiogo.rcosta@gmail.com"
-```
-
-🔐 **Important:** When prompted for a file to save the key, **don’t overwrite your existing key**
-(usually `~/.ssh/id_rsa`).
-Instead, use a custom name: bash CopyEdit”
-
-Enter file in which to save the key:
-```bash
-~/.ssh/id_rsa_personal
-```
-You can enter a passphrase (recommended) or leave it empty.
-
-### 2. Add Your SSH Key to the SSH Agent Start the SSH agent in the background:
-```bash
-eval "$(ssh-agent -s)"
-```
-
-### 3. Add Your Public Key to GitHub
-Display the new public key:
-```bash
-cat ~/.ssh/id_rsa_personal.pub
-```
-Copy the output and add it to your GitHub SSH keys settings for your personal account
-
-###4. Create an SSH Config File
-Edit or create the SSH config file:
-```bash
-nano ~/.ssh/config
-```
-
-```bash
-# Personal GitHub
-Host github-personal
-  HostName github.com
-  User git
-  IdentityFile ~/.ssh/id_rsa_personal
-
-# Work GitHub (default)
-Host github.com
-  HostName github.com
-  User git
-  IdentityFile ~/.ssh/id_rsa
-```
-
-### 5. Clone Repositories Using the Correct Host
-Use the github-personal alias for personal repositories:
-```bash
-git clone git@github-personal:your-username/your-repo.git
-Ex: git clone git@github-personal:Real-World-ML/real-time-ml-system-cohort-4.git
-```
+Feel free to explore, open issues, or contribute if you're working on similar topics!
